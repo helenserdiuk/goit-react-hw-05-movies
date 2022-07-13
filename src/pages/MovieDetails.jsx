@@ -23,7 +23,6 @@ function MovieDetails() {
         setLoading(true);
         setError(false);
         const movieDetails = await getMovieDetails(movieId);
-        console.log(movieDetails);
         setMovie(movieDetails);
       } catch (err) {
         setError(err);

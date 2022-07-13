@@ -1,5 +1,6 @@
 import { Wrapper, Input } from './SearchBox.styled';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const SearchBox = ({ onSubmit }) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -26,6 +27,10 @@ const SearchBox = ({ onSubmit }) => {
       />
     </Wrapper>
   );
+};
+
+SearchBox.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default SearchBox;
